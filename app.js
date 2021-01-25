@@ -4,6 +4,7 @@ const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
 const filterOption = document.querySelector(".filter-todo");
 const inputValidation = document.getElementById("todoInput");
+const warningMsgBlock = document.getElementById("warning-msg-block");
 
 //Event Listeners
 document.addEventListener("DOMContentLoaded", getTodos);
@@ -30,9 +31,10 @@ function addTodo(event) {
     inputValidation.style.borderBottom = "2px solid red";
     inputValidation.style.height = "3.29rem";
 
-    alert("Can not create a blank to-do item");
+    warningMsgBlock.innerHTML = `<div class="warning-msg-text">Cannot Add Blank To-Do Item</div>`; //Adds warning message if the todo name is empty
     return;
   }
+  warningMsgBlock.innerHTML = ``; //No warning message
   inputValidation.style.borderBottom = "2px solid green";
   inputValidation.style.height = "3.29rem";
 

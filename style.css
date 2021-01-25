@@ -15,6 +15,14 @@ header {
   font-size: 1.5rem;
 }
 
+#warning-msg-block {
+  display: flex;
+  justify-content: center;
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 header,
 form {
   min-height: 20vh;
