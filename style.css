@@ -109,7 +109,7 @@ form button:hover {
   pointer-events: none;
 }
 
-.completed {
+.complete {
   text-decoration: line-through;
   opacity: 0.5;
 }

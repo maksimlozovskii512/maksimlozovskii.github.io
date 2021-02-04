@@ -80,7 +80,7 @@ function deleteCheck(e) {
   //CHECKMARK
   if (item.classList[0] === "complete-btn") {
     const todo = item.parentElement;
-    todo.classList.toggle("completed");
+    todo.classList.toggle("complete");
   }
 }
 
@@ -91,16 +91,16 @@ function filterTodo(e) {
       case "all":
         todo.style.display = "flex";
         break;
-      case "completed":
-        if (todo.classList.contains("completed")) {
+      case "complete":
+        if (todo.classList.contains("complete")) {
           todo.style.display = "flex";
         } else {
           todo.style.display = "none";
         }
         break;
 
-      case "uncompleted":
-        if (!todo.classList.contains("completed")) {
+      case "uncomplete":
+        if (!todo.classList.contains("complete")) {
           todo.style.display = "flex";
         } else {
           todo.style.display = "none";
